@@ -24,7 +24,6 @@ const App: React.FC = () => {
         renderItem={renderItem}
         renderOverflowIndicator={renderOverflowIndicator}
         rowWidth={150}
-        columnGap={8}
         rowContainerStyles={styles.rowContainerStyles}
       />
     </View>

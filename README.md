@@ -41,7 +41,6 @@ const App: React.FC = () => {
         renderItem={renderItem}
         renderOverflowIndicator={renderOverflowIndicator}
         rowWidth={150}
-        columnGap={8}
         rowContainerStyles={styles.rowContainerStyles}
       />
     </View>
@@ -57,7 +56,6 @@ const App: React.FC = () => {
 | `renderItem`              | `(item: T) => React.ReactNode`                |         | Function to render each item.              |
 | `renderOverflowIndicator` | `(remainingCount: number) => React.ReactNode` |         | Function to render the overflow indicator. |
 | `rowWidth`                | `number`                                      | `250`   | Width of the row container in `px`.        |
-| `columnGap`               | `number`                                      | `0`     | Gap between columns in the row.            |
 | `rowContainerStyles`      | `StyleProp<ViewStyle>`                        |         | Custom styles for the row container.       |
 
 ## Contributing

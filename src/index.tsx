@@ -7,7 +7,6 @@ export interface RowWithOverflowProps<T = any> {
   renderItem: (item: T) => React.ReactNode;
   renderOverflowIndicator: (remainingCount: number) => React.ReactNode;
   rowWidth?: number;
-  columnGap?: number;
   rowContainerStyles?: StyleProp<ViewStyle>;
 }
 
@@ -21,7 +20,6 @@ const RowWithOverflow = <T,>({
   renderItem,
   renderOverflowIndicator,
   rowWidth = 250,
-  columnGap = 0,
   rowContainerStyles,
 }: RowWithOverflowProps<T>) => {
   type ItemType = (typeof items)[0];
@@ -68,9 +66,7 @@ const RowWithOverflow = <T,>({
   };
 
   return (
-    <View
-      style={[styles.row, { width: rowWidth, columnGap }, rowContainerStyles]}
-    >
+    <View style={[styles.row, { width: rowWidth }, rowContainerStyles]}>
       {(allMeasured ? visibleItems : items).map((item, index) => (
         <View
           key={index}
