@@ -23,7 +23,7 @@ const App: React.FC = () => {
         items={items}
         renderItem={renderItem}
         renderOverflowIndicator={renderOverflowIndicator}
-        rowWidth={150}
+        rowWidth={300}
         rowContainerStyles={styles.rowContainerStyles}
       />
     </View>
