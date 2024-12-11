@@ -4,9 +4,9 @@ A React Native component that displays items in a row with overflow indicator(+n
 
 ## Example
 
-|               with 250px width               |               with 350px width               |
-| :------------------------------------------: | :------------------------------------------: |
-| ![](./example/assets/Screenshot%20250px.png) | ![](./example/assets/Screenshot%20350px.png) |
+|                                               with 250px width                                                |                                               with 350px width                                                |
+| :-----------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------: |
+| ![](https://github.com/shivanshBTW/react-native-overflow-row/blob/main/example/assets/Screenshot%20250px.png) | ![](https://github.com/shivanshBTW/react-native-overflow-row/blob/main/example/assets/Screenshot%20350px.png) |
 
 ## Installation
 
