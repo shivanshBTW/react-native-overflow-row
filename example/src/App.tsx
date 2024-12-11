@@ -37,7 +37,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 16,
   },
   rowContainerStyles: {
-    marginBottom: 8,
+    columnGap: 8,
   },
   item: {
     justifyContent: 'center',
