@@ -1,6 +1,6 @@
 {
   "name": "react-native-overflow-row",
-  "version": "1.0.1",
+  "version": "1.0.0",
   "description": "A React Native component that displays items in a row with overflow indicator(+n)",
   "source": "./src/index.tsx",
   "main": "./lib/commonjs/index.js",
@@ -196,8 +196,5 @@
     "languages": "js",
     "type": "library",
     "version": "0.45.5"
-  },
-  "directories": {
-    "example": "example"
   }
 }
