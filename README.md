@@ -8,17 +8,57 @@ A React Native component that displays items in a row with overflow indicator(+n
 npm install react-native-overflow-row
 ```
 
-## Usage
+OR
 
-
-```js
-import { multiply } from 'react-native-overflow-row';
-
-// ...
-
-const result = await multiply(3, 7);
+```sh
+yarn add react-native-overflow-row
 ```
 
+## Usage
+
+```js
+import RowWithOverflow from 'react-native-overflow-row';
+
+const App: React.FC = () => {
+  const items = Array.from({ length: 10 }, (_, i) => `Item ${i + 1}`);
+
+  const renderItem = (item: string) => (
+    <View style={styles.item}>
+      <Text style={styles.itemText}>{item}</Text>
+    </View>
+  );
+
+  const renderOverflowIndicator = (remainingCount: number) => (
+    <View style={styles.item}>
+      <Text style={styles.itemText}>+{remainingCount}</Text>
+    </View>
+  );
+
+  return (
+    <View style={styles.container}>
+      <RowWithOverflow
+        items={items}
+        renderItem={renderItem}
+        renderOverflowIndicator={renderOverflowIndicator}
+        rowWidth={150}
+        columnGap={8}
+        rowContainerStyles={styles.rowContainerStyles}
+      />
+    </View>
+  );
+};
+```
+
+## Props
+
+| Name                      | Type                                          | Default | Description                                |
+| ------------------------- | --------------------------------------------- | ------- | ------------------------------------------ |
+| `items`                   | `T[]`                                         |         | Array of items to be displayed in the row. |
+| `renderItem`              | `(item: T) => React.ReactNode`                |         | Function to render each item.              |
+| `renderOverflowIndicator` | `(remainingCount: number) => React.ReactNode` |         | Function to render the overflow indicator. |
+| `rowWidth`                | `number`                                      | `250`   | Width of the row container in `px`.        |
+| `columnGap`               | `number`                                      | `0`     | Gap between columns in the row.            |
+| `rowContainerStyles`      | `StyleProp<ViewStyle>`                        |         | Custom styles for the row container.       |
 
 ## Contributing
 
@@ -27,7 +67,3 @@ See the [contributing guide](CONTRIBUTING.md) to learn how to contribute to the 
 ## License
 
 MIT
-
----
-
-Made with [create-react-native-library](https://github.com/callstack/react-native-builder-bob)

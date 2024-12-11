@@ -1,20 +1,57 @@
-import { Text, View, StyleSheet } from 'react-native';
-import { multiply } from 'react-native-overflow-row';
+import React from 'react';
+import { View, Text, StyleSheet } from 'react-native';
+import RowWithOverflow from 'react-native-overflow-row';
 
-const result = multiply(3, 7);
+const App: React.FC = () => {
+  const items = Array.from({ length: 10 }, (_, i) => `Item ${i + 1}`);
 
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Result: {result}</Text>
+  const renderItem = (item: string) => (
+    <View style={styles.item}>
+      <Text style={styles.itemText}>{item}</Text>
     </View>
   );
-}
+
+  const renderOverflowIndicator = (remainingCount: number) => (
+    <View style={styles.item}>
+      <Text style={styles.itemText}>+{remainingCount}</Text>
+    </View>
+  );
+
+  return (
+    <View style={styles.container}>
+      <RowWithOverflow
+        items={items}
+        renderItem={renderItem}
+        renderOverflowIndicator={renderOverflowIndicator}
+        rowWidth={150}
+        columnGap={8}
+        rowContainerStyles={styles.rowContainerStyles}
+      />
+    </View>
+  );
+};
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    alignItems: 'center',
     justifyContent: 'center',
+    paddingHorizontal: 16,
+  },
+  rowContainerStyles: {
+    marginBottom: 8,
+  },
+  item: {
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#007bff',
+    borderRadius: 5,
+    padding: 10,
+  },
+  itemText: {
+    color: 'white',
+    fontWeight: 'bold',
+    fontSize: 14,
   },
 });
+
+export default App;
