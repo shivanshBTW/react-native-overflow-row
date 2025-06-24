@@ -2,6 +2,13 @@
 
 A React Native component that displays items in a row with overflow indicator(+n)
 
+![npm](https://img.shields.io/npm/dm/react-native-overflow-row.svg?label=downloads&style=for-the-badge)
+[![downloads](https://img.shields.io/npm/dt/react-native-overflow-row.svg?style=for-the-badge&label=overall%20downloads)](https://www.npmjs.com/package/react-native-overflow-row)
+<br/>
+![npm](https://img.shields.io/npm/v/react-native-overflow-row.svg?style=for-the-badge)
+![NPM](https://img.shields.io/npm/l/react-native-overflow-row.svg?label=license&style=for-the-badge)
+[![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg?style=for-the-badge)](https://standardjs.com)
+
 ## Example
 
 |                                               with 250px width                                                |                                               with 350px width                                                |
